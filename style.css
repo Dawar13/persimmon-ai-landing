@@ -63,8 +63,10 @@ canvas#hero-canvas {
 .hero-text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateY(30px);
+    left: 5%;
+    /* Move to left side */
+    transform: translateY(-50%) translateY(30px);
+    /* Vertical center + initial offset */
     z-index: 3;
     color: #fff;
     /* Try to match the rough/brush style from the image */
@@ -73,7 +75,8 @@ canvas#hero-canvas {
     font-weight: 900;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
+    /* Align text left */
     white-space: nowrap;
     opacity: 0;
     margin: 0;
