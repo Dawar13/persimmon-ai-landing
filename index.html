@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +26,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="loading-screen" id="loading-screen">
@@ -36,12 +38,13 @@
             <div class="hero-sticky-wrapper">
                 <!-- Layer 1: Background -->
                 <div class="hero-bg"></div>
-                
+
                 <!-- Layer 2: Canvas for Sequence -->
                 <canvas id="hero-canvas"></canvas>
-                
+
                 <!-- Layer 3: Text -->
-                <h1 class="hero-text">Persimmon AI</h1>
+                <h1 class="hero-text">Persemon <span
+                        style="font-family: cursive; font-weight: 400; text-transform: none;">Ai</span></h1>
             </div>
         </section>
 
@@ -53,11 +56,17 @@
         </section>
     </main>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
     <!-- Dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

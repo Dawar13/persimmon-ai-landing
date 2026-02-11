@@ -1,20 +1,25 @@
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    background-color: #000; /* Fallback */
+    background-color: #000;
+    /* Fallback */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Hero Section */
 .hero-section {
-    height: 100vh; /* Will be pinned by ScrollTrigger */
+    height: 100vh;
+    /* Will be pinned by ScrollTrigger */
     width: 100%;
     position: relative;
 }
@@ -48,8 +53,10 @@ canvas#hero-canvas {
     width: 100%;
     height: 100%;
     z-index: 2;
-    display: block; /* Removes default inline spacing */
+    display: block;
     pointer-events: none;
+    mix-blend-mode: multiply;
+    /* Assumes comic frames have white background. Use 'screen' if black. */
 }
 
 /* Layer 3: Text */
@@ -57,18 +64,21 @@ canvas#hero-canvas {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) translateY(30px); /* Initial offset for animation */
+    transform: translate(-50%, -50%) translateY(30px);
     z-index: 3;
     color: #fff;
-    font-size: 5rem;
-    font-weight: 800;
+    /* Try to match the rough/brush style from the image */
+    font-family: "Impact", "Anton", sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
-    opacity: 0; /* Hidden initially */
+    opacity: 0;
     margin: 0;
     pointer-events: none;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Spacer Section */
