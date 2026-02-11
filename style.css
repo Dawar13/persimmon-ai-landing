@@ -1,0 +1,86 @@
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #000; /* Fallback */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh; /* Will be pinned by ScrollTrigger */
+    width: 100%;
+    position: relative;
+}
+
+.hero-sticky-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Layer 1: Background */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('assets/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* Layer 2: Canvas */
+canvas#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: block; /* Removes default inline spacing */
+    pointer-events: none;
+}
+
+/* Layer 3: Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(30px); /* Initial offset for animation */
+    z-index: 3;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0; /* Hidden initially */
+    margin: 0;
+    pointer-events: none;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Spacer Section */
+.spacer-section {
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.content-placeholder h2 {
+    font-size: 2rem;
+}
